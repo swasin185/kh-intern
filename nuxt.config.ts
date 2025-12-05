@@ -9,7 +9,9 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2024-04-03',
   nitro: {
-    preset: 'vercel'
+    preset: 'vercel-edge',
+    prerender: {
+      crawlLinks: true
+    }
   }
-
 })
