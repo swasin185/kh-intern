@@ -1,0 +1,29 @@
+---
+navigation:
+  label: "kh-intern"
+  to: "kh-intern"
+---
+
+## โครงการคู่มือการฝึกงาน
+
+เพื่อให้ผู้ฝึกงานได้ บันทึกข้อมูลการฝึกงานของตัวเอง โดยใช้รูปแบบเอกสาร markdown
+
+### 1.การสร้างติดตั้งซอฟต์แวร์
+
+```bash
+    # Clone ต้นแบบจาก github
+    git clone https://github.com/swasin186/kh-intern.git
+
+    # เข้าสู่ directory
+    cd kh-intern
+    # ติดตั้ง dependency
+    pnpm install
+    # รัน server
+    pnpm run dev
+```
+
+ใช้ github extension commit and push
+
+### 2.โครงสร้าง Nuxt.js Framework
+
+---
