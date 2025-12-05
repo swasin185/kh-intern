@@ -10,9 +10,11 @@ navigation:
 
 ### 1.การสร้างติดตั้งซอฟต์แวร์
 
+    Fork project from [https://github.com/swasin186/kh-intern.git]
+
 ```bash
-    # Clone ต้นแบบจาก github
-    git clone https://github.com/swasin186/kh-intern.git
+    # Clone โปรเจ็คที่ถูก fork
+    git clone https://github.com/[YourGitHubID]/kh-intern.git
 
     # เข้าสู่ directory
     cd kh-intern
