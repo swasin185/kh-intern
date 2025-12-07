@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: ['@nuxtjs/mdc']
+      exclude: ['@nuxtjs/mdc']
     }
   }
 })
