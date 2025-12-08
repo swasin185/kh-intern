@@ -9,11 +9,12 @@
   </body>
 
   <script>
+    const CHAR = "#";
+
     draw();
 
     function draw() {
       const c = parseInt(document.getElementById("line").value);
-      const CHAR = "#";
       let a = -c;
       let b = 0;
       let out = "";
@@ -21,7 +22,7 @@
       while (a <= c) {
         b = Math.round(Math.sqrt(c * c - a * a));
         out += CHAR.padStart(c - b + 1);
-        out += CHAR.padStart(2 * b + 1);
+        out += CHAR.padStart(b + b + 1);
         out += "\n";
         a += 2;
       }
