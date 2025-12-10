@@ -37,16 +37,10 @@ navigation:
 
 ::alert{color="red"}
 
-<pre>
-
-let sourceCode = AI.generateCode(YOU.enterPrompt())
-// checking, Are you a programmer? 
-if (YOU.understand(sourceCode) && 
-    YOU.debug(sourceCode) && 
-    YOU.improve(sourceCode))
-    console.log("You are a programmer")
-
-</pre>
+- มือกระบี่ที่แท้จริง เพียงกิ่งไม้ก็ใช้แทนกระบี่ สำนึกแห่งกระบี่อยู่ที่ใจ
+- โปรแกรมเมอร์ที่แท้จริง มีเพียงกระดาษกับดินสอ ก็เขียนโค้ดได้
+- เมื่อบรรลุมรรคาแห่งโปรแกรม ในมือไม่มีโค้ด ในใจก็ไม่มีโค้ด โค้ดอยู่ที่ AI
+  > Tom 'N Jerry 2025-12-10
 
 ::
 
