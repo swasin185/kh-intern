@@ -36,9 +36,18 @@ navigation:
 - ระบบประมวลผล เวลาเข้าออกงาน
 
 ::alert{color="red"}
-เมื่อใช้ AI ในการสร้างโค้ด
-โปรแกรมเมอร์ต้องเข้าใจ และอธิบายการทำงานได้
-ต้องสามารถแก้ไข และปรับปรุงโค้ดนั้นได้
+
+<pre>
+
+let sourceCode = AI.generateCode(YOU.enterPrompt())
+// checking, Are you a programmer? 
+if (YOU.understand(sourceCode) && 
+    YOU.debug(sourceCode) && 
+    YOU.improve(sourceCode))
+    console.log("You are a programmer")
+
+</pre>
+
 ::
 
 ---

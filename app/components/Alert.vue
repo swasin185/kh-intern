@@ -19,10 +19,13 @@ const { color } = defineProps({
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  margin: 1rem;
   border: 2px solid;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: larger;
+  color: cyan;
 }
 
 .alert:hover {
