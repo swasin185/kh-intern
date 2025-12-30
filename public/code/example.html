@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <p>source code ในหน้านี้ หากเข้าใจก็ถือว่าพร้อมสำหรับการฝึกงานแล้ว</p>
+    <p>ทำความเข้าใจ source code นี้ เตรียมพร้อมสำหรับการฝึกงาน</p>
     <label>Line:</label>
     <input id="line" type="number" value="30" />
-    <button onclick="draw()">Draw</button>
+    <button class="sphere-button" onclick="draw()">Draw</button>
     <pre id="out"></pre>
   </body>
 
@@ -37,6 +37,21 @@
       color: #00ff55;
       font-family: "Courier New", monospace;
       padding: 20px;
+    }
+
+    .sphere-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      background: radial-gradient(
+        circle at 35% 35%,
+        #ff6b6b,
+        #ff3333 30%,
+        #cc0000 60%,
+        #e2c1c1 100%
+      );
     }
   </style>
 </html>
