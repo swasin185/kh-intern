@@ -46,12 +46,12 @@ Primary goals:
 - Reusable components go in `/components`
 - Static files belong in `/public`
 - Content files belong in `/content`
-  - `index.md` content is custom for each intern/training condition
-  - `recruitement.md` is trainee / intern requirements for recruitement process
-  - `kh-intern.md` is this project's self documentation
-  - `glossary.md` is glossary of terms used in training process
-  - `installation.md` is general software installation instructions for intern's environment
   - `about.md` is personal data of intern / trainee for resume
+  - `glossary.md` is glossary of terms used in training process
+  - `index.md` content is custom for each intern/training condition
+  - `installation.md` is general software installation instructions for intern's environment
+  - `kh-intern.md` is this project's self documentation
+  - `recruitement.md` is trainee / intern requirements for recruitement process
 
 ---
 

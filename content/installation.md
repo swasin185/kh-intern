@@ -10,7 +10,20 @@ navigation:
 
 ---
 
-## Linux (Ubuntu 25 / Debian 13)
+## Linux OS
+
+### OS Installation
+
+- ต้องมีชื่อผู้ใช้ root เสมอ แต่ไม่ตั้งรหัสผ่าน ให้สร้างผู้ใช้ ในชื่อตนเอง รันคำสั่งผ่าน sudo
+- ไดเร็คทอรี่ /home/username เป็นที่เก็บข้อมูลส่วนตัวของผู้ใช้
+- /etc เป็นที่เก็บข้อมูลติดตั้งระบบ
+
+```bash
+  # ดูรายละเอียดของระบบ
+  hostnamectl
+```
+
+### Software Update
 
 ```bash
   #อัพเดทรายการซอฟแวร์ที่มีเวอร์ชั่นใหม่
@@ -19,11 +32,16 @@ navigation:
   sudo apt upgrade -y
   #ติดตั้งโปรแกรมพื้นฐาน
   sudo apt install curl git
-  # ดูรายละเอียดของระบบ
-  hostnamectl
 ```
 
-for client use Elementary OS 8
+### Linux for developer's PC
+
+- Elementary OS 8
+  - Debian based Linux distribution
+  - Clean & clear UI Look&Feel like macOS
+- Debian 13 with XFCE
+  - small footprint
+  - XFCE customizable and light weight UI
 
 ---
 
@@ -47,6 +65,7 @@ Node24 ติดตั้งบน Linux (Ubuntu / Debian) [https://nodejs.org/e
 ## Google Antigravity
 
 Antigravity Download ติดตั้งบน [deb-based Linux distributions (eg. Debian, Ubuntu)](https://antigravity.google/download/linux)
+
 ```bash
   # โหลด key และเพิ่ม repo apt package
   sudo mkdir -p /etc/apt/keyrings
@@ -58,6 +77,7 @@ Antigravity Download ติดตั้งบน [deb-based Linux distributions 
   sudo apt update
   sudo apt install antigravity
 ```
+
 <div class="flex justify-center">
   <img src="/images/screen-001.png" style="width:auto; height:auto;" alt="Antigravity" />
 </div>
