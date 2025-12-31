@@ -20,13 +20,13 @@ navigation:
 - ต้องมีชื่อผู้ใช้ root เสมอ แต่ไม่ตั้งรหัสผ่าน ให้สร้างผู้ใช้ ในชื่อตนเอง รันคำสั่งผ่าน sudo
 - ไดเร็คทอรี่ /home/username เป็นที่เก็บข้อมูลส่วนตัวของผู้ใช้
 - /etc เป็นที่เก็บข้อมูลติดตั้งระบบ
-- สร้างดิสต์ partition (GPT)
-  - 500MB fat32 boot /boot/efi
-  - 500GB ext4 /
-  - 5GB swap
+- install bluetooth (blueman)
+- for user's PC install Elementary OS / Mint
 
 ```bash
   # ดูรายละเอียดของระบบ
+  sudo apt install xfonts-thai
+  sudo apt install curl git
   hostnamectl
 ```
 
@@ -38,18 +38,6 @@ navigation:
   #ติดตั้งโปรแกรมที่ปรับปรุง
   sudo apt upgrade -y
   #ติดตั้งโปรแกรมพื้นฐาน
-  sudo apt install curl git
-```
-
-### ParrotOS 7.0 (Developer's PC)
-
-- Supper minimal footprint, Resource efficient
-- Debian based Linux distribution
-- Clean & clear UI Look&Feel like macOS
-
-```bash
-  # สำหรับ ParrotOS ควรติดตั้ง font เพิ่มเติม
-  sudo apt install xfonts-thai
 ```
 
 ---
