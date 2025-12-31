@@ -97,3 +97,23 @@ Antigravity Download ติดตั้งบน [deb-based Linux distributions 
 </div>
 
 ---
+
+## Git Configuration
+
+ตั้งค่า Git ให้จดจำรหัสผ่าน (Personal Access Token) เพื่อไม่ต้องกรอกทุกครั้ง
+
+```bash
+  # ตั้งค่าชื่อผู้ใช้และอีเมล (เปลี่ยนเป็นของตัวเอง)
+  git config --global user.name "Your Name"
+  git config --global user.email "your_email@example.com"
+
+  # ตั้งค่าให้จำรหัสผ่านถาวร
+  git config --global credential.helper store
+```
+
+### การใช้งานครั้งแรก
+
+เมื่อทำการ `git push` หรือ `git pull` ครั้งแรก ระบบจะถาม Username และ Password:
+
+1. **Username**: ใส่ชื่อ GitHub Username ของคุณ
+2. **Password**: ใส่ **Personal Access Token (PAT)** (เช่น `ghp_...`) ห้ามใช้รหัสผ่าน Login ปกติ
