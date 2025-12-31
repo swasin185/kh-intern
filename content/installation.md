@@ -37,10 +37,18 @@ navigation:
 ### Linux for developer's PC
 
 - ParrotOS 7.0 (Developer's PC)
-  - Minimal footprint, Resource efficient
+  - Supper minimal footprint, Resource efficient
   - Debian based Linux distribution
   - Clean & clear UI Look&Feel like macOS
-  - Security focused
+  - สร้างดิสต์ partition เอง (GPT)
+    - 500MB fat32 boot /boot/efi
+    - 500GB ext4 /
+
+```bash
+  # สำหรับ ParrotOS ควรติดตั้ง font เพิ่มเติม
+  sudo apt install xfonts-thai
+```
+
 - Debian 13 (Server)
   - Server Environment
   - Minimal footprint, Resource efficient
@@ -68,6 +76,9 @@ Node24 ติดตั้งบน Linux (Ubuntu / Debian) [https://nodejs.org/e
 ## Google Antigravity
 
 Antigravity Download ติดตั้งบน [deb-based Linux distributions (eg. Debian, Ubuntu)](https://antigravity.google/download/linux)
+
+- เข้าใช้ด้วย Google Account
+- ยืนยันการอนุญาติใช้งาน Github repository
 
 ```bash
   # โหลด key และเพิ่ม repo apt package
