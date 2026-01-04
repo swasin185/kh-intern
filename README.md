@@ -45,6 +45,9 @@ Primary goals:
 - Pages go in `/pages`
 - Reusable components go in `/components`
 - Static files belong in `/public`
+  - `favicon.ico` is the website favicon
+  - `code/example.html` is an basic html code for learning programing and logic
+    > for intern's training, to understand and describe the logic of code
 - Content files belong in `/content`
   - `about.md` is personal data of intern / trainee for resume
   - `glossary.md` is glossary of new technical term be learned from training process
