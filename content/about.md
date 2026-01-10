@@ -1,25 +1,25 @@
 ## 👤 **Personal Information**
 
-- **Name:**
-- **Nickname:**
+- **Name:** Koranit Keawmanee
+- **Nickname:** Guy
 - **Age:** 21
 - **Gender:** Male
 - **Height:** 175 cm
-- **Weight:** 65 kg
+- **Weight:** 57 kg
 - **Hometown:** Phuket, Thailand
-- **Interests:** Web Dev, Backend, Data Engineering, Automation
+- **Interests:** Web Dev, Backend, Data,  Data Engineering, Data Analysis
 - **Personality:** Introvert, Friendly, Curious, Always Learning
-- **Hobbies:** Playing Video Games, Watching Movies, Reading Books
+- **Hobbies:** Playing Video Games, Watching Movies, listening to music 
 
 ---
 
 ## 🎓 **Education**
 
-- **Degree:**
-- **Major:**
-- **Institute:**
-- **Graduation Year:**
-- **GPA:**
+- **Degree:** Bachelor of Science (Digital Business)
+- **Major:** B.Sc. (Digital Business)
+- **Institute:** Prince of Songkla University Phuket Campus
+- **Graduation Year:** 2026
+- **GPA:** 3.66
 
 ---
 
