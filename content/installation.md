@@ -131,6 +131,7 @@ navigation:
 ```bash
   # เริ่มเข้าใช้งาน MariaDB ผ่าน terminal
   sudo mysql
+  # สร้าง User และฐานข้อมูล และให้สิทธิ์การใช้งาน ของ user นี้
   ...
   CREATE USER 'username'@'%' IDENTIFIED BY 'password';
   CREATE DATABASE database_name;

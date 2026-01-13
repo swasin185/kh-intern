@@ -29,4 +29,12 @@ Fork project from
 
 ### 2.โครงสร้าง Nuxt.js Framework
 
+### 3. Query SQL Command
+
+- Select เลือกข้อมูลจาก table
+- from เลือก table
+- where เลือกข้อมูลที่ต้องการใน table
+- group by เลือกข้อมูลที่จัดกลุ่ม เพื่อไม่ได้เกิดความนับซ้ำ ของข้อมูล
+- order by เลือกข้อมูลที่ต้องการเรียงลำดับ
+
 ---
