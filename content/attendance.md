@@ -93,12 +93,14 @@ navigation:
 
 ### ✅ เคสเขียว — ทำงานปกติ (08:00–17:00)
 
-- มีการสแกน **เข้าเช้า** และ **ออกเย็น** ครบถ้วน
-- เวลาการทำงานอยู่ในช่วงเวลาที่บริษัทกำหนด
-- การพักเที่ยงมีความชัดเจน
+- มีการสแกน **เข้าเช้า** และ **ออกเย็น/ค่ำ/ข้ามวัน** 
+- ~~เวลาการทำงานอยู่ในช่วงเวลาที่บริษัทกำหนด~~ 
+> (สแกนนอกเวลา จะถูก ignore)
+- การพักเที่ยงมีความชัดเจน 
   - ไม่สแกนพักเที่ยง → ระบบหักเวลาพัก 1 ชั่วโมงอัตโนมัติ
   - หรือสแกนพักเที่ยง **เป็นคู่** (ออกพักและกลับจากพัก)
-- ข้อมูลครบถ้วน ชัดเจน และสามารถคำนวณเวลาทำงานได้โดยตรง
+> รอปรับปรุง ให้คำนวณเคสพักเที่ยงขาเดียว โดยปรับเวลาพักเที่ยง 2 ชม. โดยอัตโนมัติ
+- สามารถคำนวณเวลาทำงานได้โดยตรง
 
 **สรุป:** พนักงานทำงานปกติเต็มวัน ข้อมูลพร้อมสำหรับการคำนวณ
 
@@ -109,42 +111,10 @@ navigation:
 -- เคสเขียว
 SELECT day_case, lunch_case, night_case, count(*)
 FROM vAttendance
-WHERE dateAt BETWEEN '2025-01-01' AND '2025-12-31'
-  AND morning IS NOT NULL
-  AND (
-    /* กลุ่ม morning+evening (111,113,121,122) */
-    (
-      evening IS NOT NULL
-      AND (
-        /* 111 + 113 */
-        (lunch_in IS NULL AND lunch_out IS NULL AND night IS NULL)
-        /* 121 + 122 (early ต้อง null เท่านั้น, night จะ null หรือ not null ก็ได้) */
-        OR (lunch_in IS NOT NULL AND lunch_out IS NOT NULL AND lunch_in <> lunch_out AND early IS NULL)
-      )
-    )
-    /* กลุ่ม morning only (212,213,222) */
-OR (
-      evening IS NULL
-AND (
-        /* 212 + 213 */
-        (
-          lunch_in IS NULL
-AND lunch_out IS NULL
-AND (
-            (night IS NOT NULL
-AND early IS NULL)/* 212 */
-OR (early IS NOT NULL)/* 213 (night จะมี/ไม่มีก็ได้) */
-          )
-        )
-        /* 222 */
-OR (lunch_in IS NOT NULL
-AND lunch_out IS NOT NULL
-AND lunch_in <> lunch_out
-AND night IS NOT NULL
-AND early IS NULL)
-      )
-    )
-  )
+where dateAt between '2025-01-01' and '2025-12-31' and
+      morning is not null and
+      (evening is not null || night is not null || early is not null) and
+      ((lunch_out is null && lunch_in is null) || lunch_in <> lunch_out)
 group by day_case, lunch_case, night_case;
 ```
 </details>
@@ -172,11 +142,11 @@ select day_case, lunch_case, night_case, count(*) as count
 from vAttendance
 where dateAt between '2025-01-01' and '2025-12-31' and
 (
-    (lunch_out is not null or lunch_in is not null)  and
-    (morning is null xor  (evening is null and night is null and early is null)) or
+    not (lunch_out is null and lunch_in is null)  and
+    (morning is null xor (evening is null and night is null and early is null)) or
     (lunch_out = lunch_in or lunch_out is null xor lunch_in is null) and
     not (morning is null && evening is null && night is null && early is null)
-    )
+)
 group by day_case, lunch_case, night_case;
 ```
 </details>
