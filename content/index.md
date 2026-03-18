@@ -128,4 +128,4 @@ seo:
   > Tom 'N Jerry 2025-12-10
 ::
 
-:counter
+:my-calendar
