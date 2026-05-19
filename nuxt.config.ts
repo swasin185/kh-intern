@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   ssr: true,
   extends : "docus",
-  modules: ["nuxt-studio"],
+  modules: [],
   devtools: { enabled: false },
   compatibilityDate: "2024-04-03",
   nitro: {
